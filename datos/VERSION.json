@@ -1,11 +1,12 @@
 {
   "sistema": "Gestión Comercial · Red Itínere",
-  "version_indice": 1,
+  "version_indice": 2,
   "version_metricas": 1,
   "publicado": "2026-08-26",
   "fecha_de_corte_del_dato": "2026-08-04",
-  "estado_de_certificacion": "ninguna regla certificada",
-  "motivo": "Falta nombrar al aprobador de cada ámbito. Hasta entonces todo sale como INTERPRETACION.",
+  "estado_de_certificacion": "1 de 92 páginas certificada; ninguna métrica certificada",
+  "motivo": "Sólo regla-sedes tiene responsable y aprobador nombrados. El resto no, y hasta que los tenga todo número sale como INTERPRETACION.",
+  "que_cambio_en_esta_version": "Se publicaron las 92 páginas de reglas/ con su catálogo en reglas/INDICE.md. Los números no cambiaron: version_metricas sigue en 1.",
   "proximo_refresco": "cuando llegue un export nuevo del CRM",
   "como_verificar_que_estas_al_dia": "Si version_metricas es distinta de la que citaste en un informe anterior, los números cambiaron. Volvé a leer datos/metricas.json."
 }

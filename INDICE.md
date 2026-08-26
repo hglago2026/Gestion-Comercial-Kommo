@@ -26,8 +26,10 @@ Traé estos tres archivos antes de responder cualquier pregunta:
 | **Los números vigentes** | [`datos/metricas.json`](datos/metricas.json) |
 | **Qué versión estás mirando** | [`datos/VERSION.json`](datos/VERSION.json) |
 
-Si necesitás el detalle de una definición, está en [`reglas/`](reglas/). No lo traigas entero:
-buscá la página que corresponde.
+Si necesitás el detalle de una definición —qué cuenta como prospecto, cómo se mide la
+ocupación, qué es un pase de sede— está en [`reglas/INDICE.md`](reglas/INDICE.md), que es el
+catálogo de las 92 páginas del modelo. **No traigas la carpeta entera:** buscá en ese catálogo
+la página que corresponde y traé sólo esa.
 
 **Traelos cada vez que empieza una conversación nueva.** No los guardes ni los des por sabidos: si
 alguien corrigió una regla ayer, la versión que tenías en memoria está mal.

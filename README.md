@@ -24,7 +24,7 @@ pregunta ya toma lo nuevo, sin que hagas nada.**
 | [`datos/metricas.json`](datos/metricas.json) | Los números vigentes, y la lista de lo que todavía no se puede responder |
 | [`datos/VERSION.json`](datos/VERSION.json) | Qué versión y de qué fecha es el dato |
 | [`formatos/FORMATOS.md`](formatos/FORMATOS.md) | Cómo se entrega cada informe |
-| [`reglas/`](reglas/) | El detalle de cada definición, con su fuente |
+| [`reglas/INDICE.md`](reglas/INDICE.md) | El detalle de cada definición, con su fuente — 92 páginas |
 
 ## Cómo se actualiza
 
