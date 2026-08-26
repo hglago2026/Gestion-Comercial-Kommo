@@ -1,0 +1,145 @@
+{
+  "_lea_esto_primero": "Estos números YA ESTÁN CALCULADOS. No los recalcules, no los sumes, no los proyectes. Leelos y presentalos. Si te piden algo que no está acá, mirá la sección 'no_publicado' al final.",
+
+  "version": 1,
+  "publicado": "2026-08-26",
+  "fecha_de_corte_del_dato": "2026-08-04",
+  "etiqueta_global": "INTERPRETACION",
+  "por_que_esa_etiqueta": "Ninguna regla de este modelo está certificada todavía, porque el circuito de certificación exige un aprobador nominal por ámbito y aún no está nombrado. Ningún número de este archivo puede presentarse como dato oficial.",
+
+  "sedes": [
+    {"codigo": "nfs_puertos",   "nombre": "NFS Puertos",   "institucion": "Northfield"},
+    {"codigo": "nfs_nordelta",  "nombre": "NFS Nordelta",  "institucion": "Northfield"},
+    {"codigo": "cdf_benavidez", "nombre": "CDF Benavidez", "institucion": "Colegio del Faro"},
+    {"codigo": "cdf_escobar",   "nombre": "CDF Escobar",   "institucion": "Colegio del Faro"},
+    {"codigo": "cdf_puertos",   "nombre": "CDF Puertos",   "institucion": "Colegio del Faro"},
+    {"codigo": "lth_hudson",    "nombre": "LTH Hudson",    "institucion": "Lighthouse"}
+  ],
+
+  "ocupacion_y_vacancia_2027": {
+    "que_mide": "Cuántos lugares del cupo declarado ya están tomados para el ciclo lectivo 2027, y cuántos quedan.",
+    "formula": "vacancia = cupo definido − (alumnos que promocionan + ingresantes confirmados), ajustado por permanencias y bajas",
+    "quien_lo_calcula": "Una planilla de Excel del equipo, NO este modelo. Si usás estos números, aclará que los estás reportando, no calculando.",
+    "etiqueta": "INTERPRETACION",
+    "unidad": "cantidad de lugares",
+    "filas": [
+      {"sede": "NFS Puertos",   "cupo": 1359, "promocionan": 1252, "ingresantes": 74, "ocupacion": 1270, "vacancia": 89,  "porcentaje_ocupacion": 93.5},
+      {"sede": "NFS Nordelta",  "cupo": 1272, "promocionan": 980,  "ingresantes": 38, "ocupacion": 968,  "vacancia": 304, "porcentaje_ocupacion": 76.1},
+      {"sede": "CDF Benavidez", "cupo": 1204, "promocionan": 909,  "ingresantes": 69, "ocupacion": 978,  "vacancia": 228, "porcentaje_ocupacion": 81.2},
+      {"sede": "CDF Escobar",   "cupo": 924,  "promocionan": 737,  "ingresantes": 52, "ocupacion": 789,  "vacancia": 135, "porcentaje_ocupacion": 85.4},
+      {"sede": "CDF Puertos",   "cupo": 660,  "promocionan": 458,  "ingresantes": 53, "ocupacion": 523,  "vacancia": 137, "porcentaje_ocupacion": 79.2}
+    ],
+    "total": {"cupo": 5419, "promocionan": 4336, "ingresantes": 286, "ocupacion": 4528, "vacancia": 893, "porcentaje_ocupacion": 83.6},
+    "excluido": {
+      "sede": "LTH Hudson",
+      "cupo_declarado": 150,
+      "motivo": "Los números por nivel de la planilla de origen repiten la grilla de CDF Puertos y arrojan una vacancia que no cierra contra su cupo. Hasta que se corrija, esta sede NO entra en ningún total.",
+      "que_hacer": "Si alguien pregunta por Hudson, decí exactamente esto y no estimes nada."
+    },
+    "advertencias_obligatorias": [
+      "Cinco de las seis sedes verifican ocupación + vacancia = cupo, exacto. CDF Benavidez difiere en 2 lugares.",
+      "En el ciclo actual NFS Puertos registra 1.347 alumnos con un cupo de 1.329: está por encima de su capacidad.",
+      "El detalle por nivel y por turno existe pero no está publicado: falta unificar los nombres de turno, que en el CRM tienen 15 grafías distintas."
+    ]
+  },
+
+  "embudo_comercial": {
+    "que_mide": "Volumen y comportamiento del proceso de admisión, contado desde el CRM Kommo.",
+    "fecha_de_corte": "2026-08-04",
+    "etiqueta": "INTERPRETACION",
+    "valores": {
+      "movimientos_registrados": 935468,
+      "consultas_totales": 43893,
+      "consultas_con_al_menos_un_cambio_de_estado": 14828,
+      "ingresantes_ciclo_2027_segun_crm": 234,
+      "pases_entre_sedes": 537,
+      "tiempo_promedio_hasta_primer_contacto_dias_habiles": 6.8,
+      "porcentaje_rechazados": 4.7,
+      "permanencia_promedio_en_esperando_familia_dias": 44.3
+    },
+    "sla_devolucion_doe": {
+      "compromiso_dias_habiles": 7,
+      "promedio_real_dias_habiles": 15.3,
+      "porcentaje_de_cumplimiento": 57.6,
+      "nota": "Es el único plazo que el negocio puso por escrito."
+    }
+  },
+
+  "divergencias_conocidas": [
+    {
+      "tema": "Cantidad de ingresantes 2027",
+      "fuente_a": "CRM Kommo: 234",
+      "fuente_b": "Planilla de reportes del equipo: 286",
+      "diferencia": 52,
+      "estado": "Sin resolver. Nadie definió cuál manda.",
+      "que_hacer": "Si alguien pide la cantidad de ingresantes, dá los dos números y decí que difieren. No elijas uno."
+    },
+    {
+      "tema": "Consultas sin sede asignada",
+      "detalle": "22.901 de 43.893 consultas (52%) no tienen sede por ningún camino.",
+      "matiz_importante": "Los ingresantes SÍ tienen sede, todos sin excepción. El agujero está al principio del embudo, no al final, así que no afecta a las métricas de ocupación ni de conversión avanzada.",
+      "que_hacer": "Declaralo cada vez que presentes algo cortado por sede."
+    },
+    {
+      "tema": "Fechas imposibles",
+      "detalle": "3.659 consultas registran su primer contacto ANTES de la fecha en que la consulta fue creada.",
+      "estado": "Sin explicar. Puede ser carga retroactiva o consultas recreadas."
+    },
+    {
+      "tema": "Días hábiles sin feriados",
+      "detalle": "Todos los plazos se calculan descontando sábados y domingos, pero no feriados.",
+      "consecuencia": "Los plazos reales son iguales o mayores a los informados."
+    }
+  ],
+
+  "no_publicado": [
+    {
+      "pregunta_tipica": "¿Cuántos alumnos tenemos?",
+      "por_que_no": "Un caso es alumno recién cuando paga la reserva y el primer arancel. Ese dato vive en Sedna, el sistema de facturación, que no está conectado con el CRM.",
+      "hasta_donde_llega_el_modelo": "Hasta ingresante confirmado.",
+      "quien_lo_destraba": "Sistemas — conexión Kommo ↔ Sedna."
+    },
+    {
+      "pregunta_tipica": "¿Cuál es la tasa de conversión sobre el total de consultas?",
+      "por_que_no": "El denominador depende de qué consultas se descartan, y hay tres definiciones distintas circulando entre las planillas del equipo. Ninguna fue ratificada.",
+      "quien_lo_destraba": "Secretaría de Ingresos — enumerar las exclusiones por estado."
+    },
+    {
+      "pregunta_tipica": "¿Cómo viene cada secretaria de ingresos?",
+      "por_que_no": "El 65% de los movimientos está registrado bajo dos usuarios compartidos, no bajo personas. Cualquier ranking individual sería falso.",
+      "quien_lo_destraba": "Sistemas — usuarios individuales en el CRM."
+    },
+    {
+      "pregunta_tipica": "¿Cuántas reuniones presenciales hubo, y cuántas virtuales?",
+      "por_que_no": "El tipo de reunión no se registra al momento de generarla.",
+      "quien_lo_destraba": "Secretaría de Ingresos — tipificar la reunión en el CRM."
+    },
+    {
+      "pregunta_tipica": "¿Cuántos alumnos vamos a tener el año que viene?",
+      "por_que_no": "Se sabe quiénes promocionan y quiénes ya reservaron, pero los casos de permanencia —chicos que repiten el nivel— se gestionan a mano y no están en ningún sistema.",
+      "que_si_se_puede": "Dar la ocupación proyectada 2027 de este archivo, aclarando que no descuenta permanencias.",
+      "quien_lo_destraba": "Secretaría de Ingresos — etiqueta de permanencia en el CRM."
+    },
+    {
+      "pregunta_tipica": "Ocupación abierta por nivel, curso o turno",
+      "por_que_no": "El dato existe con ese detalle, pero los nombres de turno no están unificados: el CRM tiene 15 grafías para lo mismo.",
+      "quien_lo_destraba": "Secretaría de Ingresos — nombre canónico de cada turno."
+    }
+  ],
+
+  "fuentes": [
+    {
+      "nombre": "Export de eventos del CRM Kommo",
+      "archivo": "kommo__eventos__20260804.xlsx",
+      "filas": 935468,
+      "sha256": "9FFFD5093FA9549EC84D64BB3D3D5BDFAA4928255CD84E070DBD22BFEAA04241",
+      "donde_vive": "Carpeta privada de Drive, acceso nominal. Contiene datos personales de menores: no se publica."
+    },
+    {
+      "nombre": "Planilla de reportes por sede",
+      "archivo": "A - NFSs reportes",
+      "aporta": "Cupos, alumnos existentes, ocupación proyectada y vacancia.",
+      "advertencia": "Tiene 21 solapas de reporte y 7 pares de snapshots duplicados que difieren entre sí. Se tomó el más completo de cada sede; cuál rige no está definido."
+    }
+  ]
+}
