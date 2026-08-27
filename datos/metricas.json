@@ -1,11 +1,12 @@
 {
   "_lea_esto_primero": "Estos números YA ESTÁN CALCULADOS. No los recalcules, no los sumes, no los proyectes. Leelos y presentalos. Si te piden algo que no está acá, mirá la sección 'no_publicado' al final.",
 
-  "version": 1,
-  "publicado": "2026-08-26",
+  "version": 2,
+  "publicado": "2026-08-27",
   "fecha_de_corte_del_dato": "2026-08-04",
   "etiqueta_global": "INTERPRETACION",
-  "por_que_esa_etiqueta": "Ninguna regla de este modelo está certificada todavía, porque el circuito de certificación exige un aprobador nominal por ámbito y aún no está nombrado. Ningún número de este archivo puede presentarse como dato oficial.",
+  "por_que_esa_etiqueta": "El circuito de certificación ya tiene sus dos roles nombrados —Lorena Papalini como aprobadora (respuesta J3) y como responsable de negocio de todo el modelo (2026-08-27)—, pero ninguna página pasó todavía por el circuito una por una. Hasta que eso ocurra, ningún número de este archivo puede presentarse como dato oficial.",
+  "que_falta_para_certificar": "Revisar cada página del modelo con su responsable y dejar asentada la aprobación. Nombrar a la persona ya no es el bloqueante; el paso pendiente es la revisión.",
 
   "sedes": [
     {"codigo": "nfs_puertos",   "nombre": "NFS Puertos",   "institucion": "Northfield"},
@@ -71,14 +72,19 @@
       "fuente_a": "CRM Kommo: 234",
       "fuente_b": "Planilla de reportes del equipo: 286",
       "diferencia": 52,
-      "estado": "Sin resolver. Nadie definió cuál manda.",
-      "que_hacer": "Si alguien pide la cantidad de ingresantes, dá los dos números y decí que difieren. No elijas uno."
+      "estado": "RESUELTO 2026-08-27: manda el CRM. La cifra oficial de ingresantes 2027 es 234.",
+      "decidido_por": "Dirección, planilla de definiciones del 2026-08-27",
+      "que_hacer": "Si alguien pide la cantidad de ingresantes, dá 234 y aclará que el CRM es la fuente que manda.",
+      "ATENCION_pendiente": "La tabla de ocupación y vacancia de este mismo archivo TODAVÍA usa los 286 de la planilla, y sus ingresantes por sede (74, 38, 69, 52, 53) salen de ahí. Hasta recalcularla contra el CRM, la ocupación está sobreestimada en hasta 52 lugares y la vacancia subestimada en la misma cantidad. Declaralo cada vez que presentes ocupación."
     },
     {
       "tema": "Consultas sin sede asignada",
       "detalle": "22.901 de 43.893 consultas (52%) no tienen sede por ningún camino.",
       "matiz_importante": "Los ingresantes SÍ tienen sede, todos sin excepción. El agujero está al principio del embudo, no al final, así que no afecta a las métricas de ocupación ni de conversión avanzada.",
-      "que_hacer": "Declaralo cada vez que presentes algo cortado por sede."
+      "estado": "RESUELTO 2026-08-27: van a una categoría «Sin asignar» visible en el informe. No se excluyen ni se imputan.",
+      "decidido_por": "Secretaría de Ingresos, planilla de definiciones del 2026-08-27",
+      "detalle_de_la_decision": "La sede la completa la familia. Hay que reportarlos como contactos sin sede, no hacerlos desaparecer del total.",
+      "que_hacer": "Mostrá siempre la fila «Sin asignar» con su cantidad cuando cortes por sede. Una fila ausente se lee como cero, y no es lo mismo."
     },
     {
       "tema": "Fechas imposibles",
@@ -87,8 +93,11 @@
     },
     {
       "tema": "Días hábiles sin feriados",
-      "detalle": "Todos los plazos se calculan descontando sábados y domingos, pero no feriados.",
-      "consecuencia": "Los plazos reales son iguales o mayores a los informados."
+      "detalle": "Los plazos publicados en este archivo se calcularon descontando sábados y domingos, pero NO feriados.",
+      "consecuencia": "Los plazos reales son iguales o MENORES a los informados. Si no se descuentan los feriados se cuentan días de más, así que el plazo informado es un techo, no una medición.",
+      "correccion_2026_08_27": "La versión 1 de este archivo decía lo contrario ('iguales o mayores'). Estaba invertido.",
+      "que_significa_para_el_SLA_del_DOE": "Los 15,3 días de devolución son un TECHO: el real es menor o igual. Y el 57,6 % de cumplimiento es un PISO: el real es mayor o igual. El DOE viene mejor de lo que dice este archivo.",
+      "estado": "El calendario de días hábiles ya está construido y verificado (feriados nacionales según Ley 27.399, 2018-2030). Falta recalcular estas métricas con él, lo que requiere el motor corriendo."
     }
   ],
 

@@ -1,12 +1,12 @@
 {
   "sistema": "Gestión Comercial · Red Itínere",
-  "version_indice": 2,
-  "version_metricas": 1,
-  "publicado": "2026-08-26",
+  "version_indice": 3,
+  "version_metricas": 2,
+  "publicado": "2026-08-27",
   "fecha_de_corte_del_dato": "2026-08-04",
-  "estado_de_certificacion": "1 de 92 páginas certificada; ninguna métrica certificada",
-  "motivo": "Sólo regla-sedes tiene responsable y aprobador nombrados. El resto no, y hasta que los tenga todo número sale como INTERPRETACION.",
-  "que_cambio_en_esta_version": "Se publicaron las 92 páginas de reglas/ con su catálogo en reglas/INDICE.md. Los números no cambiaron: version_metricas sigue en 1.",
+  "estado_de_certificacion": "Roles nombrados; ninguna página revisada todavía",
+  "motivo": "Lorena Papalini quedó nombrada como aprobadora (J3) y como responsable de negocio de todo el modelo (2026-08-27). Falta pasar cada página por el circuito de certificación. Hasta entonces todo sale como INTERPRETACION.",
+  "que_cambio_en_esta_version": "Se aplicaron las definiciones del 2026-08-27: ingresantes 2027 manda el CRM (234); las consultas sin sede van a «Sin asignar»; se corrigió la consecuencia de los días hábiles, que estaba invertida; y se registró el responsable de negocio.",
   "proximo_refresco": "cuando llegue un export nuevo del CRM",
   "como_verificar_que_estas_al_dia": "Si version_metricas es distinta de la que citaste en un informe anterior, los números cambiaron. Volvé a leer datos/metricas.json."
 }
