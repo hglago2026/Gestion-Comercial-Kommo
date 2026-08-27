@@ -1,12 +1,12 @@
 {
   "sistema": "Gestión Comercial · Red Itínere",
-  "version_indice": 3,
-  "version_metricas": 2,
+  "version_indice": 4,
+  "version_metricas": 3,
   "publicado": "2026-08-27",
   "fecha_de_corte_del_dato": "2026-08-04",
   "estado_de_certificacion": "Roles nombrados; ninguna página revisada todavía",
   "motivo": "Lorena Papalini quedó nombrada como aprobadora (J3) y como responsable de negocio de todo el modelo (2026-08-27). Falta pasar cada página por el circuito de certificación. Hasta entonces todo sale como INTERPRETACION.",
-  "que_cambio_en_esta_version": "Se aplicaron las definiciones del 2026-08-27: ingresantes 2027 manda el CRM (234); las consultas sin sede van a «Sin asignar»; se corrigió la consecuencia de los días hábiles, que estaba invertida; y se registró el responsable de negocio.",
+  "que_cambio_en_esta_version": "Se revisaron los cupos 2027 con la planilla del 2026-08-27: NFS Nordelta bajó de 1.272 a 1.119 y CDF Benavídez subió de 1.204 a 1.222. El total de las 5 sedes pasó de 5.419 a 5.284 y la vacancia de 893 a 756. Los nombres canónicos de turno quedaron definidos: las 15 grafías del CRM colapsan a 6 valores.",
   "proximo_refresco": "cuando llegue un export nuevo del CRM",
   "como_verificar_que_estas_al_dia": "Si version_metricas es distinta de la que citaste en un informe anterior, los números cambiaron. Volvé a leer datos/metricas.json."
 }

@@ -1,49 +1,125 @@
 {
   "_lea_esto_primero": "Estos números YA ESTÁN CALCULADOS. No los recalcules, no los sumes, no los proyectes. Leelos y presentalos. Si te piden algo que no está acá, mirá la sección 'no_publicado' al final.",
-
-  "version": 2,
+  "version": 3,
   "publicado": "2026-08-27",
   "fecha_de_corte_del_dato": "2026-08-04",
   "etiqueta_global": "INTERPRETACION",
   "por_que_esa_etiqueta": "El circuito de certificación ya tiene sus dos roles nombrados —Lorena Papalini como aprobadora (respuesta J3) y como responsable de negocio de todo el modelo (2026-08-27)—, pero ninguna página pasó todavía por el circuito una por una. Hasta que eso ocurra, ningún número de este archivo puede presentarse como dato oficial.",
   "que_falta_para_certificar": "Revisar cada página del modelo con su responsable y dejar asentada la aprobación. Nombrar a la persona ya no es el bloqueante; el paso pendiente es la revisión.",
-
   "sedes": [
-    {"codigo": "nfs_puertos",   "nombre": "NFS Puertos",   "institucion": "Northfield"},
-    {"codigo": "nfs_nordelta",  "nombre": "NFS Nordelta",  "institucion": "Northfield"},
-    {"codigo": "cdf_benavidez", "nombre": "CDF Benavidez", "institucion": "Colegio del Faro"},
-    {"codigo": "cdf_escobar",   "nombre": "CDF Escobar",   "institucion": "Colegio del Faro"},
-    {"codigo": "cdf_puertos",   "nombre": "CDF Puertos",   "institucion": "Colegio del Faro"},
-    {"codigo": "lth_hudson",    "nombre": "LTH Hudson",    "institucion": "Lighthouse"}
+    {
+      "codigo": "nfs_puertos",
+      "nombre": "NFS Puertos",
+      "institucion": "Northfield"
+    },
+    {
+      "codigo": "nfs_nordelta",
+      "nombre": "NFS Nordelta",
+      "institucion": "Northfield"
+    },
+    {
+      "codigo": "cdf_benavidez",
+      "nombre": "CDF Benavidez",
+      "institucion": "Colegio del Faro"
+    },
+    {
+      "codigo": "cdf_escobar",
+      "nombre": "CDF Escobar",
+      "institucion": "Colegio del Faro"
+    },
+    {
+      "codigo": "cdf_puertos",
+      "nombre": "CDF Puertos",
+      "institucion": "Colegio del Faro"
+    },
+    {
+      "codigo": "lth_hudson",
+      "nombre": "LTH Hudson",
+      "institucion": "Lighthouse"
+    }
   ],
-
   "ocupacion_y_vacancia_2027": {
     "que_mide": "Cuántos lugares del cupo declarado ya están tomados para el ciclo lectivo 2027, y cuántos quedan.",
     "formula": "vacancia = cupo definido − (alumnos que promocionan + ingresantes confirmados), ajustado por permanencias y bajas",
-    "quien_lo_calcula": "Una planilla de Excel del equipo, NO este modelo. Si usás estos números, aclará que los estás reportando, no calculando.",
+    "quien_lo_calcula": "La ocupación y los alumnos que promocionan salen de una planilla de Excel del equipo, NO de este modelo. El cupo sale de la planilla de cupos revisada el 2026-08-27. La vacancia de NFS Nordelta y CDF Benavídez la recalculó este modelo con la fórmula publicada, porque cambió el cupo y la planilla del equipo todavía no lo reflejó. Si usás estos números, aclará qué parte reportás y qué parte se recalculó.",
     "etiqueta": "INTERPRETACION",
     "unidad": "cantidad de lugares",
     "filas": [
-      {"sede": "NFS Puertos",   "cupo": 1359, "promocionan": 1252, "ingresantes": 74, "ocupacion": 1270, "vacancia": 89,  "porcentaje_ocupacion": 93.5},
-      {"sede": "NFS Nordelta",  "cupo": 1272, "promocionan": 980,  "ingresantes": 38, "ocupacion": 968,  "vacancia": 304, "porcentaje_ocupacion": 76.1},
-      {"sede": "CDF Benavidez", "cupo": 1204, "promocionan": 909,  "ingresantes": 69, "ocupacion": 978,  "vacancia": 228, "porcentaje_ocupacion": 81.2},
-      {"sede": "CDF Escobar",   "cupo": 924,  "promocionan": 737,  "ingresantes": 52, "ocupacion": 789,  "vacancia": 135, "porcentaje_ocupacion": 85.4},
-      {"sede": "CDF Puertos",   "cupo": 660,  "promocionan": 458,  "ingresantes": 53, "ocupacion": 523,  "vacancia": 137, "porcentaje_ocupacion": 79.2}
+      {
+        "sede": "NFS Puertos",
+        "cupo": 1359,
+        "promocionan": 1252,
+        "ingresantes": 74,
+        "ocupacion": 1270,
+        "vacancia": 89,
+        "porcentaje_ocupacion": 93.5
+      },
+      {
+        "sede": "NFS Nordelta",
+        "cupo": 1119,
+        "promocionan": 980,
+        "ingresantes": 38,
+        "ocupacion": 968,
+        "vacancia": 151,
+        "porcentaje_ocupacion": 86.5,
+        "cupo_anterior": 1272,
+        "nota": "El cupo bajó de 1272 a 1119. La vacancia y el porcentaje los RECALCULÓ ESTE MODELO aplicando la fórmula publicada, porque la planilla del equipo todavía no se actualizó. La ocupación es la de la planilla, sin tocar."
+      },
+      {
+        "sede": "CDF Benavidez",
+        "cupo": 1222,
+        "promocionan": 909,
+        "ingresantes": 69,
+        "ocupacion": 978,
+        "vacancia": 244,
+        "porcentaje_ocupacion": 80.0,
+        "cupo_anterior": 1204,
+        "nota": "El cupo subió de 1204 a 1222. La vacancia y el porcentaje los RECALCULÓ ESTE MODELO aplicando la fórmula publicada, porque la planilla del equipo todavía no se actualizó. La ocupación es la de la planilla, sin tocar."
+      },
+      {
+        "sede": "CDF Escobar",
+        "cupo": 924,
+        "promocionan": 737,
+        "ingresantes": 52,
+        "ocupacion": 789,
+        "vacancia": 135,
+        "porcentaje_ocupacion": 85.4
+      },
+      {
+        "sede": "CDF Puertos",
+        "cupo": 660,
+        "promocionan": 458,
+        "ingresantes": 53,
+        "ocupacion": 523,
+        "vacancia": 137,
+        "porcentaje_ocupacion": 79.2
+      }
     ],
-    "total": {"cupo": 5419, "promocionan": 4336, "ingresantes": 286, "ocupacion": 4528, "vacancia": 893, "porcentaje_ocupacion": 83.6},
+    "total": {
+      "cupo": 5284,
+      "promocionan": 4336,
+      "ingresantes": 286,
+      "ocupacion": 4528,
+      "vacancia": 756,
+      "porcentaje_ocupacion": 85.7,
+      "cupo_anterior": 5419
+    },
     "excluido": {
       "sede": "LTH Hudson",
       "cupo_declarado": 150,
-      "motivo": "Los números por nivel de la planilla de origen repiten la grilla de CDF Puertos y arrojan una vacancia que no cierra contra su cupo. Hasta que se corrija, esta sede NO entra en ningún total.",
+      "motivo": "Resuelto parcialmente el 2026-08-27: la columna 2027 cierra exacto en 150 cupos y 6 secciones, y la de 2026 quedó en cero. Sigue afuera de los totales de esta tabla porque su ocupación y sus alumnos que promocionan no vienen de la misma planilla que los del resto.",
       "que_hacer": "Si alguien pregunta por Hudson, decí exactamente esto y no estimes nada."
     },
     "advertencias_obligatorias": [
-      "Cinco de las seis sedes verifican ocupación + vacancia = cupo, exacto. CDF Benavidez difiere en 2 lugares.",
+      "Los cupos cambiaron el 2026-08-27. NFS Nordelta pasó de 1.272 a 1.119 y su ocupación saltó de 76,1 % a 86,5 % SIN que se moviera un solo alumno: cambió el denominador. Decilo siempre que compares contra un informe anterior.",
+      "La vacancia de NFS Nordelta y CDF Benavídez la calculó este modelo, no la planilla del equipo. El resto de la fila es de la planilla.",
       "En el ciclo actual NFS Puertos registra 1.347 alumnos con un cupo de 1.329: está por encima de su capacidad.",
-      "El detalle por nivel y por turno existe pero no está publicado: falta unificar los nombres de turno, que en el CRM tienen 15 grafías distintas."
-    ]
+      "Los ingresantes de esta tabla son los 286 de la planilla. El 2026-08-27 se decidió que manda el CRM, que dice 234. Hasta poder abrir el CRM por sede y ciclo, la ocupación de esta tabla está sobreestimada en hasta 52 lugares y la vacancia subestimada en lo mismo.",
+      "El detalle por nivel y por turno todavía no está publicado acá, pero ya no está bloqueado: los nombres canónicos de turno se definieron el 2026-08-27."
+    ],
+    "actualizado": "2026-08-27",
+    "que_cambio": "Se revisaron los cupos: NFS Nordelta bajó de 1.272 a 1.119 (pasó de 3 a 2 secciones en varios niveles de 2027) y CDF Benavídez subió de 1.204 a 1.222. El total de las 5 sedes bajó de 5.419 a 5.284. LTH Hudson quedó resuelta aparte: 2026 en cero y 2027 en 150, que cierra exacto en 6 secciones."
   },
-
   "embudo_comercial": {
     "que_mide": "Volumen y comportamiento del proceso de admisión, contado desde el CRM Kommo.",
     "fecha_de_corte": "2026-08-04",
@@ -65,7 +141,6 @@
       "nota": "Es el único plazo que el negocio puso por escrito."
     }
   },
-
   "divergencias_conocidas": [
     {
       "tema": "Cantidad de ingresantes 2027",
@@ -100,7 +175,6 @@
       "estado": "El calendario de días hábiles ya está construido y verificado (feriados nacionales según Ley 27.399, 2018-2030). Falta recalcular estas métricas con él, lo que requiere el motor corriendo."
     }
   ],
-
   "no_publicado": [
     {
       "pregunta_tipica": "¿Cuántos alumnos tenemos?",
@@ -131,11 +205,10 @@
     },
     {
       "pregunta_tipica": "Ocupación abierta por nivel, curso o turno",
-      "por_que_no": "El dato existe con ese detalle, pero los nombres de turno no están unificados: el CRM tiene 15 grafías para lo mismo.",
-      "quien_lo_destraba": "Secretaría de Ingresos — nombre canónico de cada turno."
+      "por_que_no": "El dato por nivel y turno existe y los nombres canónicos de turno YA SE DEFINIERON el 2026-08-27: las 15 grafías del CRM colapsan a 6 valores. Lo que falta es publicar la tabla abierta acá, que requiere el motor corriendo.",
+      "quien_lo_destraba": "Sistemas — levantar el motor y publicar el detalle. La definición de negocio ya está cerrada."
     }
   ],
-
   "fuentes": [
     {
       "nombre": "Export de eventos del CRM Kommo",
