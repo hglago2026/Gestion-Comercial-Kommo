@@ -1,12 +1,13 @@
 {
   "sistema": "Gestión Comercial · Red Itínere",
   "version_indice": 4,
-  "version_metricas": 3,
-  "publicado": "2026-08-27",
+  "version_metricas": 4,
+  "publicado": "2026-09-01",
   "fecha_de_corte_del_dato": "2026-08-04",
   "estado_de_certificacion": "Roles nombrados; ninguna página revisada todavía",
   "motivo": "Lorena Papalini quedó nombrada como aprobadora (J3) y como responsable de negocio de todo el modelo (2026-08-27). Falta pasar cada página por el circuito de certificación. Hasta entonces todo sale como INTERPRETACION.",
-  "que_cambio_en_esta_version": "Se revisaron los cupos 2027 con la planilla del 2026-08-27: NFS Nordelta bajó de 1.272 a 1.119 y CDF Benavídez subió de 1.204 a 1.222. El total de las 5 sedes pasó de 5.419 a 5.284 y la vacancia de 893 a 756. Los nombres canónicos de turno quedaron definidos: las 15 grafías del CRM colapsan a 6 valores.",
+  "alerta_de_gobierno": "Las dos figuras del circuito —responsable de negocio y aprobadora— son la misma persona. El hueco formal está cerrado, pero quien define la métrica es quien la aprueba: no hay control cruzado. Lo decide Dirección.",
+  "que_cambio_en_esta_version": "Los tiempos y los rechazados se recalcularon con el calendario de días hábiles: la devolución del DOE pasó de 15,3 a 11,6 días y su cumplimiento de 57,6 % a 67,9 %; los rechazados de 4,7 % a 6,9 %; la permanencia en esperando familia de 44,3 a 34,9 días. No cambió ningún dato de origen: es el mismo export del 2026-08-04, contado con el calendario correcto. Se publica además la efectividad —convocatoria 62,4 % y comercial 47,9 % sin hermanos / 49,3 % con—, que no estaba. Se retira el tiempo hasta el primer contacto, porque el hito del que se cuenta no está definido, y se retira el número de pases entre sedes hasta saber qué mide cada una de las dos cifras que circulan.",
   "proximo_refresco": "cuando llegue un export nuevo del CRM",
   "como_verificar_que_estas_al_dia": "Si version_metricas es distinta de la que citaste en un informe anterior, los números cambiaron. Volvé a leer datos/metricas.json."
 }

@@ -1,0 +1,44 @@
+# =====================================================================
+# Gestión Comercial · Red Itínere — REPOSITORIO PÚBLICO
+#
+# Acá vive lo que cualquiera puede leer: el índice, el contrato, las
+# reglas y las métricas YA AGREGADAS. Nunca dato al nivel de la persona.
+#
+# El detalle por consulta (`drilldown_leads.csv`) trae identificadores de
+# Kommo y nombres de menores. J1 (2026-09-01) dice que TODOS LOS DEL
+# EQUIPO pueden ver todo. NO dice que se publique afuera: este repo es
+# público y se lee sin sesión iniciada. El CSV se manda por canal interno.
+# =====================================================================
+
+# --- El detalle al lead: nunca ---
+drilldown_leads.csv
+drilldown*.csv
+*_leads.csv
+
+# --- Dato en cualquier formato ---
+*.csv
+*.tsv
+*.xlsx
+*.xlsm
+*.xls
+*.parquet
+*.db
+*.sqlite
+*.dump
+*.bak
+
+# --- Credenciales ---
+.env
+*.env
+credenciales*
+*.pem
+*.key
+
+# --- Sistema y editores ---
+.DS_Store
+Thumbs.db
+desktop.ini
+__pycache__/
+*.pyc
+.idea/
+.vscode/

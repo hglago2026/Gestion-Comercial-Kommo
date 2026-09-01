@@ -1,8 +1,21 @@
 {
   "_lea_esto_primero": "Estos números YA ESTÁN CALCULADOS. No los recalcules, no los sumes, no los proyectes. Leelos y presentalos. Si te piden algo que no está acá, mirá la sección 'no_publicado' al final.",
-  "version": 3,
-  "publicado": "2026-08-27",
+  "version": 4,
+  "publicado": "2026-09-01",
   "fecha_de_corte_del_dato": "2026-08-04",
+  "que_cambio_en_la_version_4": {
+    "resumen": "Los tiempos y los rechazados se recalcularon con el calendario de días hábiles, que en la v3 todavía no se había aplicado. La v3 decía de sí misma que sus plazos eran un techo y que faltaba recalcularlos: esto es ese recálculo. Además se publica la efectividad comercial, que no estaba.",
+    "no_cambio_ningun_dato_de_origen": "Es el mismo export del 2026-08-04. Cambió cómo se cuentan los días, no qué pasó.",
+    "valores_reemplazados": [
+      {"que": "Devolución del DOE, promedio", "v3": "15,3 dias", "v4": "11,6 dias"},
+      {"que": "Cumplimiento del plazo de 7 dias", "v3": "57,6 %", "v4": "67,9 %"},
+      {"que": "Rechazados", "v3": "4,7 %", "v4": "6,9 %"},
+      {"que": "Permanencia en esperando familia", "v3": "44,3 dias", "v4": "34,9 dias"}
+    ],
+    "por_que_el_DOE_mejoro": "Como anticipaba la v3: al descontar los feriados se cuentan menos días. Los 15,3 eran un techo y el 57,6 % un piso. El DOE venía mejor de lo que decía el archivo.",
+    "por_que_subieron_los_rechazados": "Cambió el denominador, no el numerador: se cuentan contra los que tienen fecha de taller cargada (1.458). Cuál es el denominador correcto sigue siendo una decisión abierta de Secretaría de Ingresos.",
+    "si_citaste_la_v3_en_un_informe": "Los cuatro números de arriba cambiaron. Ninguno por un dato nuevo: todos por el calendario. Decilo si comparás."
+  },
   "etiqueta_global": "INTERPRETACION",
   "por_que_esa_etiqueta": "El circuito de certificación ya tiene sus dos roles nombrados —Lorena Papalini como aprobadora (respuesta J3) y como responsable de negocio de todo el modelo (2026-08-27)—, pero ninguna página pasó todavía por el circuito una por una. Hasta que eso ocurra, ningún número de este archivo puede presentarse como dato oficial.",
   "que_falta_para_certificar": "Revisar cada página del modelo con su responsable y dejar asentada la aprobación. Nombrar a la persona ya no es el bloqueante; el paso pendiente es la revisión.",
@@ -129,19 +142,63 @@
       "consultas_totales": 43893,
       "consultas_con_al_menos_un_cambio_de_estado": 14828,
       "ingresantes_ciclo_2027_segun_crm": 234,
-      "pases_entre_sedes": 537,
-      "tiempo_promedio_hasta_primer_contacto_dias_habiles": 6.8,
-      "porcentaje_rechazados": 4.7,
-      "permanencia_promedio_en_esperando_familia_dias": 44.3
+      "consultas_de_admision": 11517,
+      "porcentaje_rechazados": 6.9,
+      "permanencia_promedio_en_esperando_familia_dias_habiles": 34.9
+    },
+    "consultas_de_admision_nota": "Es un PISO, no un total: sólo se clasifican las que movieron de estado. La otra lectura válida —las que pasaron alguna vez por admisión— da 11.725. Las dos se publican; cuál manda no está decidido.",
+    "tiempo_hasta_primer_contacto": {
+      "valor": "NO PUBLICADO",
+      "por_que": "El hito de 'creación del lead' no está definido: según de qué evento se cuente, el número va de 6,8 a 75 días hábiles. Además 4.354 consultas de admisión registran su primera comunicación ANTES de su primer cambio de estado, lo que prueba que el hito que se usaba está mal elegido.",
+      "retirado_en": "v4, 2026-09-01",
+      "estaba_en_la_v3_como": "6.8 días hábiles — se retira porque publicaba una de las lecturas posibles sin decir que era una elección.",
+      "quien_lo_destraba": "Secretaría de Ingresos + Sistemas"
+    },
+    "efectividad": {
+      "convocatoria": {
+        "valor": 62.4,
+        "unidad": "%",
+        "que_mide": "De los invitados a una reunión, cuántos asistieron."
+      },
+      "comercial_sin_hermanos": {
+        "valor": 47.9,
+        "unidad": "%",
+        "que_mide": "De los que asistieron a la reunión, cuántos cerraron: reserva (los TRES estados de G3) o lista de espera."
+      },
+      "comercial_con_hermanos": {
+        "valor": 49.3,
+        "unidad": "%",
+        "que_mide": "Lo mismo, sumando a los que esperan vacante por tener un hermano en el colegio."
+      },
+      "OBLIGACION_DE_REPORTE": "Se publican SIEMPRE los dos números, nunca uno solo. `ESPERANDO VACANTE HNO` se cuenta aparte: es un estado en sí mismo, no una variante de la lista de espera. Decisión N8, firmada el 2026-08-27 por Aníbal Escudero.",
+      "agregado_en": "v4, 2026-09-01. La v3 no publicaba efectividad comercial: el prompt del tester la tenía y este archivo no."
+    },
+    "calidad_de_leads": {
+      "valor": 99.8,
+      "unidad": "%",
+      "nota": "Mide calidad del dato DENTRO de admisión. Sobre todos los embudos daría otro número, porque el recorte por embudo pasa antes."
     },
     "sla_devolucion_doe": {
       "compromiso_dias_habiles": 7,
-      "promedio_real_dias_habiles": 15.3,
-      "porcentaje_de_cumplimiento": 57.6,
-      "nota": "Es el único plazo que el negocio puso por escrito."
+      "promedio_real_dias_habiles": 11.6,
+      "porcentaje_de_cumplimiento": 67.9,
+      "nota": "Es el único plazo que el negocio puso por escrito.",
+      "recalculado_en": "v4 con el calendario de días hábiles (Ley 27.399 + la decisión de que la red trabaja los días no laborables). La v3 decía 15,3 y 57,6 %.",
+      "reserva_que_viaja_con_el_numero": "Sólo 332 de las 1.458 consultas con taller tienen la devolución cargada. El 77 % sin devolución NO está fuera de plazo: es dato que falta.",
+      "NO_ABRIR_POR_SEDE": "El plazo abierto por sede da de 5 a 35 días hábiles, con muestras chicas y cobertura despareja. No se publica por sede hasta revisarlo."
     }
   },
   "divergencias_conocidas": [
+    {
+      "tema": "Pases entre sedes: 537 o 294",
+      "fuente_a": "Este archivo, hasta la v3: 537",
+      "fuente_b": "El kit del tester: 294 'posibles'",
+      "estado": "SIN RESOLVER. Se retira el número de los valores publicados hasta saber qué mide cada uno.",
+      "por_que_no_se_eligio_uno": "No se sabe si son dos mediciones del mismo hecho con distinto filtro, o dos hechos distintos —detectados contra concretados—. Reemplazar 537 por 294 sin saberlo sería elegir en silencio, que es justo lo que este sistema no hace.",
+      "lo_que_si_es_seguro": "Sea cual sea, es una HIPÓTESIS y no una medición: los pases se detectan por texto libre en el campo 'colegio actual', así que cualquier grafía distinta se pierde. Y falta definir qué marca un pase como CONCRETADO.",
+      "que_hacer": "Si preguntan por pases, decí que el número está en revisión y explicá cómo se detectan. No des ninguno de los dos como si fuera el bueno.",
+      "quien_lo_destraba": "Secretaría de Ingresos"
+    },
     {
       "tema": "Cantidad de ingresantes 2027",
       "fuente_a": "CRM Kommo: 234",
@@ -171,8 +228,9 @@
       "detalle": "Los plazos publicados en este archivo se calcularon descontando sábados y domingos, pero NO feriados.",
       "consecuencia": "Los plazos reales son iguales o MENORES a los informados. Si no se descuentan los feriados se cuentan días de más, así que el plazo informado es un techo, no una medición.",
       "correccion_2026_08_27": "La versión 1 de este archivo decía lo contrario ('iguales o mayores'). Estaba invertido.",
-      "que_significa_para_el_SLA_del_DOE": "Los 15,3 días de devolución son un TECHO: el real es menor o igual. Y el 57,6 % de cumplimiento es un PISO: el real es mayor o igual. El DOE viene mejor de lo que dice este archivo.",
-      "estado": "El calendario de días hábiles ya está construido y verificado (feriados nacionales según Ley 27.399, 2018-2030). Falta recalcular estas métricas con él, lo que requiere el motor corriendo."
+      "que_significa_para_el_SLA_del_DOE": "Los 15,3 días de devolución eran un TECHO y el 57,6 % de cumplimiento un PISO. Al recalcular quedaron en 11,6 días y 67,9 %: el DOE venía mejor de lo que decía el archivo, tal como estaba anticipado acá.",
+      "estado": "RESUELTO en la v4, 2026-09-01. El calendario está construido y verificado (feriados nacionales según Ley 27.399, más la decisión firmada de que la red trabaja los días no laborables) y los tiempos de este archivo YA se recalcularon con él.",
+      "lo_que_sigue_faltando": "El calendario ESCOLAR de la red, que según la respuesta del equipo no existe como documento formal y quedó sin dueño asignado. No afecta a estos números."
     }
   ],
   "no_publicado": [
